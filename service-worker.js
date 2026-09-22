@@ -1,11 +1,11 @@
 /* Release cache only. User records live in localStorage/IndexedDB and are never
  * read, migrated, or deleted here. Bump VERSION whenever any precached byte changes. */
 'use strict';
-const VERSION = 'encrypted-533d4e32b6fa3443';
+const VERSION = 'encrypted-81e513bf4209efdd';
 const SCOPE = self.registration.scope;
 const CACHE_PREFIX = `travel-handbook:${encodeURIComponent(SCOPE)}:`;
 const CACHE_NAME = `${CACHE_PREFIX}${VERSION}`;
-const ASSETS = ["index.html","unlock.js","payload.json","manifest.json","icon-192.png","icon-512.png","apple-touch-icon.png","encrypted-3f764f24dc9ee7bbbc15bb5767c6e66293dedc0f2b67a04ca44ef8fde164dc61.bin","encrypted-e9c2d5228a32edb507e5a0078c821f081e5e8eddf2193689394b7a7064ebcd52.bin","encrypted-a5fb4124a151329ddfff6f55e954e790beb38a93e590f71375ed99dbf1817975.bin","encrypted-4fbca5846a96ac34e11211557c2c71f9045fffda10431fd1eb39cdd8459a33ab.bin","encrypted-6ee260db306089f1066a057ef0de190c269fdd9edf824c7489646ffd41dd9a98.bin","encrypted-2578ae2293b86ff74801835a91fc1c6c91f79e91da3a02b0295d1e7b292bd543.bin","encrypted-86519c1dd536a70a5cf953a326b0530ad69eea22fc27b52ec9804e9d93a2eed8.bin"];
+const ASSETS = ["index.html","unlock.js","payload.json","manifest.json","icon-192.png","icon-512.png","apple-touch-icon.png","encrypted-4c5f196289381194567d51ab604129c8115c82b4bcf0d19a93da57468ecaa8d8.bin","encrypted-884d5c5e21a201647f039e3f94fb38e8b090dafde705060d011ed6d8ffa10426.bin","encrypted-18b05404191a4dec707301215d6b674e042910616c6811c74d106b2eabc012f2.bin","encrypted-4462b2439c501a859bf3e851661bcd10552fa473f43b85f764942163a49b7b99.bin","encrypted-06164ddd67900a4f55449af739f5b217c01f2edb780ebfd9fe9ebd1e5994a326.bin","encrypted-6c8022dabc02f6a7c4cf1ce59045f56d3cb43e412ba82076a6d09ba03c3adab0.bin","encrypted-30fae2b28d1b705a032e4ec201cf621db02d20d238294071a11a317c1cf5b9ea.bin"];
 const ASSET_URLS = ASSETS.map(path => new URL(path, SCOPE).href);
 const INDEX_URL = ASSET_URLS[0];
 
